@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Contact Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    #root {
+      margin: 0;
+      padding: 0;
+    }
+
+    .card-container {
+      background-color: #395144;
+      height: 100vh;
+      border-radius: 0;
+    }
+
+    .inner-card {
+      background: #E5F9DB;
+    }
+
+    .phone-icon {
+      font-size: 45px;
+      color: #1A5D1A;
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .phone-number {
+      margin: 15px 0;
+    }
+
+    .show-button {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(234, 242, 249);;">
+        <div class="container">
+            <!-- Replace 'path/to/your/logo.png' with the actual path to your logo image -->
+            <a class="navbar-brand" href="index.html" style="color: black; font-weight: bold; display: flex; align-items: center;">
+                <img src="swapna-high-resolution-logo-transparent.png" alt="Swapna Logo" style="height: auto; max-width: 100%;" height="95px" width="150px">
+            </a>
+    
+            <!-- Mobile responsive toggle button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style=""  >
+                <span class="navbar-toggler-icon" style=""></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html" style="color: Black; font-weight: bold;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" style="color: Black; font-weight: bold;">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project.html" style="color: Black; font-weight: bold;">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color: Black; font-weight: bold;">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  <div id="root">
+    <div class="card card-container">
+      <!-- Header Component -->
+      <div>
+        <!-- Header Content Goes Here -->
+      </div>
+
+      <div class="container my-5">
+        <div class="card inner-card">
+          <div class="card-body">
+            <span class="phone-icon">&#128241;</span>
+            <div class="phone-number">
+              <button class="btn btn-outline-primary" onclick="handleShowContact()">Show Contact Details</button>
+            </div>
+            <div id="contactDetails" style="display: none;">
+              <p class="m-3">My Number Is <br /><a href="tel:88658502506">88658502506</a></p>
+              <p class="m-3">Email: <br /><a href="mailto:swapnarani.sonu@gmail.com">swapnarani.sonu@gmail.com</a></p>
+              <p class="m-3">Thank You For Contacting Me.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function handleShowContact() {
+      var contactDetails = document.getElementById('contactDetails');
+      contactDetails.style.display = contactDetails.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
